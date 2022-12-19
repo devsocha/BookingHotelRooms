@@ -1,6 +1,15 @@
 @extends('skieleton')
 @section('content')
-    <label>Wpisz swój email: </label><br>
-    <input type="text"><br><br>
-    <input type="submit" value="Resetuj hasło">
+    <div>
+        <form action="{{route('forget_password_send')}}" method="post">
+            @csrf
+            <label>Wpisz swój email: </label><br>
+            <input type="text" name="email"><br><br>
+            <input type="submit" value="Resetuj hasło">
+        </form>
+    </div>
+    <div>
+        <a href="{{route('login')}}">Wróć do strony logowania</a>
+    </div>
+
 @endsection

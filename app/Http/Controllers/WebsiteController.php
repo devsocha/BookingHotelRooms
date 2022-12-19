@@ -18,9 +18,6 @@ class WebsiteController extends Controller
     public function registration(){
         return view('registration');
     }
-    public function logout(){
-        return back();
-    }
     public function forgetPassword(){
         return view('forget_password');
     }
