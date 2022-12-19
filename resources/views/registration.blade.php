@@ -1,11 +1,12 @@
 @extends('skieleton')
 @section('content')
-    <form action="" method="post">
+    <form action="{{route('registration_save')}}" method="post">
+        @csrf
         <div>
             <label> Imie i nazwisko</label><br>
             <input type="text" name="name"><br>
             <label> Email</label><br>
-            <input type="text" name="mail"><br>
+            <input type="text" name="email"><br>
             <label> Hasło</label><br>
             <input type="password" name="password"><br>
             <label> Powtórz hasło</label><br>
