@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\WebsiteController::class,'index'])->name('home');
-Route::get('/dashboard', [\App\Http\Controllers\WebsiteController::class,'dashboard'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard/user', [\App\Http\Controllers\WebsiteController::class,'dashboardUser'])->name('dashboard_user')->middleware('auth','user');
+Route::get('/dashboard/admin', [\App\Http\Controllers\WebsiteController::class,'dashboardAdmin'])->name('dashboard_admin')->middleware('auth','admin');
+
+Route::get('/settings', [\App\Http\Controllers\WebsiteController::class,'settings'])->name('settings')->middleware('admin');
 
 Route::get('/login', [\App\Http\Controllers\WebsiteController::class,'login'])->name('login');
 Route::post('/login/check', [\App\Http\Controllers\CredentialController::class,'loginCheck'])->name('login_check');

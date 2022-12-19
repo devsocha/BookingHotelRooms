@@ -9,8 +9,11 @@ class WebsiteController extends Controller
     public function index(){
         return view('home');
     }
-    public function dashboard(){
+    public function dashboardUser(){
         return view('dashboard');
+    }
+    public function dashboardAdmin(){
+        return view('dashboard_admin');
     }
     public function login(){
         return view('login');
@@ -20,5 +23,8 @@ class WebsiteController extends Controller
     }
     public function forgetPassword(){
         return view('forget_password');
+    }
+    public function settings(){
+        return view('settings');
     }
 }
