@@ -21,4 +21,7 @@ class WebsiteController extends Controller
     public function logout(){
         return back();
     }
+    public function forgetPassword(){
+        return view('forget_password');
+    }
 }

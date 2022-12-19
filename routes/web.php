@@ -8,3 +8,4 @@ Route::get('/dashboard', [\App\Http\Controllers\WebsiteController::class,'dashbo
 Route::get('/login', [\App\Http\Controllers\WebsiteController::class,'login'])->name('login');
 Route::get('/registration', [\App\Http\Controllers\WebsiteController::class,'registration'])->name('registration');
 Route::get('/logout', [\App\Http\Controllers\WebsiteController::class,'logout'])->name('logout');
+Route::get('/forget-password', [\App\Http\Controllers\WebsiteController::class,'forgetPassword'])->name('forget_password');
