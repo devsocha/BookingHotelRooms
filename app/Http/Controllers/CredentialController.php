@@ -18,12 +18,7 @@ class CredentialController extends Controller
             'status'=> 'aktywny',
         ];
         if(Auth::attempt($credentilals)){
-            if(Auth::guard('web')->user()->role == 1){
-                return redirect()->route('dashboard_admin');
-            }else
-            {
-                return redirect()->route('dashboard_user');
-            }
+            return redirect()->route('dashboard_user');
         }else{
             return redirect()->route('login');
         }

@@ -12,9 +12,7 @@ class WebsiteController extends Controller
     public function dashboardUser(){
         return view('dashboard');
     }
-    public function dashboardAdmin(){
-        return view('dashboard_admin');
-    }
+
     public function login(){
         return view('login');
     }
